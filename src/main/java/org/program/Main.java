@@ -14,7 +14,6 @@ public class Main {
         PersonaService personaService = new PersonaService();
 
         try {
-            // Crear domicilio sin ID
             Domicilio domicilio = Domicilio.builder()
                     .calle("Av. Siempre Viva")
                     .numero(742)
@@ -23,7 +22,6 @@ public class Main {
             domicilioService.guardar(domicilio);
             System.out.println("Domicilio guardado con ID: " + domicilio.getId());
 
-            // Crear persona sin ID y con domicilio asociado
             Persona persona = Persona.builder()
                     .nombre("Homero")
                     .apellido("Simpson")
@@ -33,7 +31,7 @@ public class Main {
             personaService.guardar(persona);
             System.out.println("Persona guardada con ID: " + persona.getId());
 
-            // Listar todas las personas
+            // Listar personas
             List<Persona> personas = personaService.listarTodos();
             System.out.println("Listado de personas:");
             for (Persona p : personas) {
