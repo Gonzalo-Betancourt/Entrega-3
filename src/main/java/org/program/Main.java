@@ -14,14 +14,15 @@ public class Main {
         PersonaService personaService = new PersonaService();
 
         try {
+
             // Crear domicilio sin ID
             Domicilio domicilio = Domicilio.builder()
                     .calle("Av. Siempre Viva")
                     .numero(742)
                     .build();
 
-            domicilioService.guardar(domicilio);
-            System.out.println("Domicilio guardado con ID: " + domicilio.getId());
+            //domicilioService.guardar(domicilio);
+            //System.out.println("Domicilio guardado con ID: " + domicilio.getId());
 
             // Crear persona sin ID y con domicilio asociado
             Persona persona = Persona.builder()
@@ -47,6 +48,8 @@ public class Main {
             System.err.println("Error de base de datos: " + e.getMessage());
         } catch (IllegalArgumentException e) {
             System.err.println("Error de validación: " + e.getMessage());
+        } catch (Exception e){
+            System.err.println("Ocurrió un error: " + e.getMessage());
         }
     }
 }

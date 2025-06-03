@@ -21,8 +21,8 @@ public class PersonaDAO implements GenericDAO<Persona> {
             ps.setString(2, persona.getApellido());
             ps.setLong(3, persona.getDomicilio().getId());
 
-            int affectedRows = ps.executeUpdate();
-            if (affectedRows == 0) {
+            int columnasAfectadas = ps.executeUpdate();
+            if (columnasAfectadas == 0) {
                 throw new SQLException("Fallo al insertar persona, no se afectaron filas.");
             }
 

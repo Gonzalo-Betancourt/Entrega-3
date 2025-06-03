@@ -5,9 +5,9 @@ import java.util.List;
 import java.util.Optional;
 
 public interface GenericService<T> {
-    void guardar(T entidad) throws SQLException;
-    void actualizar(T entidad) throws SQLException;
-    void eliminar(Long id) throws SQLException;
-    Optional<T> buscarPorId(Long id) throws SQLException;
-    List<T> listarTodos() throws SQLException;
+    void guardar(T entidad) throws Exception;
+    void actualizar(T entidad) throws Exception;
+    void eliminar(Long id) throws Exception;
+    Optional<T> buscarPorId(Long id) throws Exception;
+    List<T> listarTodos() throws Exception;
 }

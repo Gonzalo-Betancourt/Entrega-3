@@ -12,29 +12,29 @@ public class DomicilioService implements GenericService<Domicilio> {
     private final DomicilioDAO domicilioDAO = new DomicilioDAO();
 
     @Override
-    public void guardar(Domicilio d) throws SQLException {
+    public void guardar(Domicilio d) throws Exception {
         validar(d);
         domicilioDAO.guardar(d);
     }
 
     @Override
-    public void actualizar(Domicilio d) throws SQLException {
+    public void actualizar(Domicilio d) throws Exception {
         validar(d);
         domicilioDAO.actualizar(d);
     }
 
     @Override
-    public void eliminar(Long id) throws SQLException {
+    public void eliminar(Long id) throws Exception {
         domicilioDAO.eliminar(id);
     }
 
     @Override
-    public Optional<Domicilio> buscarPorId(Long id) throws SQLException {
+    public Optional<Domicilio> buscarPorId(Long id) throws Exception {
         return domicilioDAO.buscarPorId(id);
     }
 
     @Override
-    public List<Domicilio> listarTodos() throws SQLException {
+    public List<Domicilio> listarTodos() throws Exception {
         return domicilioDAO.listarTodos();
     }
 
