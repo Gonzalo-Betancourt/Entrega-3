@@ -40,7 +40,6 @@ public class DomicilioService implements GenericService<Domicilio> {
 
     public void validar(Domicilio d) {
         if (d == null) throw new IllegalArgumentException("El domicilio no puede ser null.");
-        // if (d.getId() == null) throw new IllegalArgumentException("El domicilio debe tener un ID.");
         if (d.getCalle() == null || d.getCalle().isBlank()) throw new IllegalArgumentException("La calle no puede estar vacía.");
         if (d.getNumero() <= 0) throw new IllegalArgumentException("El número debe ser mayor a 0.");
     }

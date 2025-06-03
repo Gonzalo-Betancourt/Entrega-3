@@ -43,7 +43,6 @@ public class PersonaService implements GenericService<Persona> {
 
     private void validar(Persona p) {
         if (p == null) throw new IllegalArgumentException("La persona no puede ser null.");
-        // if (p.getId() == null) throw new IllegalArgumentException("La persona debe tener un ID.");
         if (p.getNombre() == null || p.getNombre().isBlank()) throw new IllegalArgumentException("El nombre no puede estar vacío.");
         if (p.getApellido() == null || p.getApellido().isBlank()) throw new IllegalArgumentException("El apellido no puede estar vacío.");
         domicilioService.validar(p.getDomicilio());
